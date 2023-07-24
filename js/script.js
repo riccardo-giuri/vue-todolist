@@ -22,5 +22,13 @@ Vue.createApp({
                 done: false
             },]
         }
+    },
+
+    methods: {
+        deleteTask(itemID) {
+            const listIndex = this.toDoList.findIndex((task) => task.id === itemID);
+            this.toDoList.splice(listIndex, 1);
+            console.log(this.toDoList);
+        }
     }
 }).mount("#app"); 
