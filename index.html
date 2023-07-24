@@ -20,8 +20,11 @@
     
                     <div class="col-8">
                         <div class="input-group mt-4">
-                            <input type="text" class="form-control form-control-lg" placeholder="Write the task you want to add to the List" aria-label="Username">
-                            <button class="btn btn-secondary width_20">Add Task</button>
+                            <input type="text" class="form-control form-control-lg" 
+                                   placeholder="Write the task you want to add to the List" aria-label="Username"
+                                   v-model="newTaskText">
+                            <button class="btn btn-secondary width_20" 
+                                    @click="addTask">Add Task</button>
                         </div>
                     </div>
     

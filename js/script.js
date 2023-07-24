@@ -20,7 +20,10 @@ Vue.createApp({
                 id: 4,
                 text: "Ciao Sono il testo della Task",
                 done: false
-            },]
+            },],
+
+            newTaskText: "",
+            idCounter: 0
         }
     },
 
@@ -28,6 +31,17 @@ Vue.createApp({
         deleteTask(itemID) {
             const listIndex = this.toDoList.findIndex((task) => task.id === itemID);
             this.toDoList.splice(listIndex, 1);
+        },
+
+        addTask() {
+            this.idCounter++
+            const newTask = {
+                id: this.idCounter,
+                text: this.newTaskText,
+                done: false
+            };
+
+            this.toDoList.push(newTask);
             console.log(this.toDoList);
         }
     }
