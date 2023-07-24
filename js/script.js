@@ -9,7 +9,7 @@ Vue.createApp({
             {
                 id: 2,
                 text: "Ciao Sono il testo della Task",
-                done: false
+                done: true
             },
             {
                 id: 3,

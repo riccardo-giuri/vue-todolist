@@ -30,8 +30,12 @@
     
                         <div class="card">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex align-items-center flex-wrap">
-                                    <div class="fs-5 mW_95">Lorem, ipsum dolor sit</div>
+                                <li class="list-group-item d-flex align-items-center flex-wrap" 
+                                    v-for="task in toDoList">
+                                    <div class="fs-5 mW_95" 
+                                         :class="task.done === true ? ' text-decoration-line-through' : ''"> 
+                                         {{ task.text }} 
+                                    </div>
     
                                     <div>
                                         <button class="btn btn-link text-danger fs-5 mW_5"><i class="fa-solid fa-x"></i></button>
