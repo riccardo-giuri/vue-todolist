@@ -1,0 +1,11 @@
+.width_20 {
+    width: 20%;
+}
+
+.mW_5 {
+    flex-basis: 5%;
+}
+
+.mW_95 {
+    flex-basis: 95%;
+}
